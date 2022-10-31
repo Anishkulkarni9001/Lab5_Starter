@@ -38,8 +38,8 @@ function init() {
   playButton.addEventListener('click', (event) => {
     if(hornChoiceBar.value == "select")
       return;
-    else if(hornChoiceBar.value == "party-horn") {
-      jsConfetti.addConfetti({document, confettiNumber: 1000,});
+    if(hornChoiceBar.value == "party-horn") {
+      jsConfetti.addConfetti({confettiNumber: 1000, emojis: ['🎉'],});
     }
     audio.play();
   });
