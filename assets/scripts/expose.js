@@ -7,6 +7,7 @@ function init() {
   const hornChoiceBar = document.getElementById('horn-select');
   const volumeBar = document.getElementById('volume');
   const playButton = document.querySelector('button')
+  const jsConfetti = new JSConfetti();
 
   // Set default audio
   audio.volume = 0.5;
@@ -35,11 +36,10 @@ function init() {
 
   // Play audio
   playButton.addEventListener('click', (event) => {
-    const jsConfetti = new JSConfetti();
     if(hornChoiceBar.value == "select")
       return;
     else if(hornChoiceBar.value == "party-horn") {
-      jsConfetti.addConfetti({document, confettiNumber: 500,});
+      jsConfetti.addConfetti({document, confettiNumber: 1000,});
     }
     audio.play();
   });
